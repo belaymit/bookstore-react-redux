@@ -59,20 +59,6 @@
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -195,8 +181,8 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/belaymit/math-magicians/issues).
-..
+Feel free to check the [issues page](https://github.com/belaymit/bookstore-react-redux/issues)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
@@ -213,7 +199,7 @@ If you like this project please give it a star
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Microverse community
+- I would like to thank Microverse community
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
