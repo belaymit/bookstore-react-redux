@@ -1,0 +1,46 @@
+@import '../commons/common-css-rules.scss';
+
+.footer {
+  background: $color-primary;
+  color: rgba(255, 255, 255, 0.61);
+  height: auto;
+  margin: 2.625rem 0;
+
+  .footer-container {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 1rem;
+
+    @include md {
+      display: flex;
+      align-items: center;
+      margin: auto 2rem;
+    }
+
+    .footer-logo {
+      h3 {
+        font-family: $ff-logo;
+      }
+
+      @include sm {
+        width: 10rem;
+      }
+    }
+
+    @include lg {
+      margin: 0 10rem;
+    }
+
+    .footer-content {
+      .copyright {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @include sm {
+    margin: auto;
+  }
+}
