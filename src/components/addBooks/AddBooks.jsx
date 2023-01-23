@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBooks } from '../../redux/books/booksSlice';
+import { addBooks } from '../../redux/books/books';
 import '../../styles/addBooks.scss';
 
 const getDataFromLocalStorage = () => {
