@@ -3,7 +3,7 @@
 
 <div align="center">
   <img src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=600" alt="magic calculator logo" width="400" height="200"/>
-  <h1>Book Store</h1>
+  <h1>Book Store App</h1>
   <br/>
 </div>
 
@@ -36,15 +36,16 @@
 # 📖 bookstore-react-redux<a name="about-project"></a>
 
 
-**bookstore-react-redux** is a project I created using ReactJS. From this project anticipate to learn:
+**bookstore-react-redux** is a user-friendly and effective book store app that lets users browse books. The app makes use of the Redux library for managing the application's state and the React library for creating the user interface. With quick updates and simple navigation, this technology combination offers a seamless and responsive experience. The app also offers a store in which user can check for all available books.
 - React 18 and best practices
 - props and states
 - React Router 
 - React Icons 
 - Re-Usable Components
-- React Hooks (useState)
+- React Hooks
 - CSS transition and animation
 - Redux for state management
+- Redux-toolkit
 - and more...
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -65,6 +66,8 @@
 
 - **Navigation**
 - **Home Page**
+- **Store**
+- **Contacts**
 - **Footer**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -95,6 +98,7 @@ In order to run this project you need:
 > - JSX
 > - ReactJS
 > - redux
+> - redux-toolkit
 ### tools
 - install Vs Code or any of your favored code editor
 - install node 
@@ -137,8 +141,10 @@ To run the project, execute the following command:
 ### Run tests
 
 To run tests, run the following command:
->  npm run test
-
+  
+```sh
+ npm run test
+```
 
 ### Deployment
 
@@ -172,7 +178,7 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Categories**
-- **Book store**
+- **Book Details**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -210,7 +216,7 @@ If you like this project please give it a star
 
 - **What are the core requirements to do this project?**
 
-  - having a knowledge of ES6 and basic understanding of ReactJS, redux, react-router, state management, props.
+  - having a knowledge of ES6 and basic understanding of ReactJS, redux, react-router, state management, props, redux-toolkit, api and many more.
 
 - **What is the expected outcome of the project?**
 
