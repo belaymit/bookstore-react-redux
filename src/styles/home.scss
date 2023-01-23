@@ -4,18 +4,32 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: $background-clr;
-  margin: 2rem 10rem;
 
   .books-section {
+    width: 100%;
+    margin: 0 4rem 0.75rem 4rem;
     background: $color-white;
-    margin-top: 2rem;
-    width: 90%;
   }
 
   .add-book-section {
-    background: $color-white;
-    width: 90%;
-    margin: 1rem;
+    background: transparent;
+    width: 100%;
+    margin: 1rem 4rem 0;
+  }
+
+  .horizontal-divide {
+    height: 0.1rem;
+    background-color: #e8e8e8;
+    width: 100%;
+    margin: 2.5rem 0 0;
+  }
+
+  @include sm {
+    margin: 2rem 0;
+  }
+
+  @include lg {
+    padding: 4rem;
+    margin: 4rem;
   }
 }
