@@ -1,0 +1,42 @@
+@import '../commons/common-css-rules.scss';
+
+.store-container {
+  margin-top: 3rem;
+  background: linear-gradient(rgba(24, 24, 31, 0.3), rgba(7, 7, 7, 0.5)), url('../assets/book-store.avif') center/cover no-repeat;
+  opacity: 0.9;
+  min-height: 65vh;
+
+  .store-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .store-wrapper {
+      margin-top: 4rem;
+      width: 50%;
+      text-align: center;
+
+      .title {
+        background: transparent;
+        padding: 1rem 0;
+        font-size: 1.75rem;
+        color: $color-white;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(196, 186, 173, 0.349);
+      }
+
+      .description {
+        font-size: 1.2rem;
+        color: rgb(231, 231, 224);
+      }
+    }
+  }
+}
+
+.all-books-in-store {
+  margin: 2rem 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13.75rem, 1fr));
+  gap: 0.5rem;
+}
