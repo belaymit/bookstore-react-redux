@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import AddBooks from '../../components/addBooks/AddBooks';
 import Book from '../../components/books/Book';
-import { addBooks, getAllBooks } from '../../redux/books/booksSlice';
+import { addBooks } from '../../redux/books/books';
 import '../../styles/home.scss';
 
-const getDatafromLS = () => {
+const getDataFromLocalStorage = () => {
   const data = localStorage.getItem('books');
   if (data) {
     return JSON.parse(data);
@@ -14,15 +14,15 @@ const getDatafromLS = () => {
 };
 
 const Home = () => {
-  const allBooks = useSelector(getAllBooks);
+  // const allBooks = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const [storedBooks, setStoredBooks] = useState(getDatafromLS());
+  const [storedBooks, setStoredBooks] = useState(getDataFromLocalStorage());
   console.log(setStoredBooks);
-  dispatch(addBooks(storedBooks));
 
+  dispatch(addBooks(storedBooks));
   let renderBooks = '';
-  renderBooks = allBooks.length > 0 ? (
-    allBooks.map((elem) => (
+  renderBooks = storedBooks.length > 0 ? (
+    storedBooks.map((elem) => (
       <>
         <section className="books-section" key={elem.id}>
           <Book data={elem} />
