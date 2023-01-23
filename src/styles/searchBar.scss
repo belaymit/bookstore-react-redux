@@ -1,0 +1,54 @@
+@import '../commons/common-css-rules.scss';
+
+.search-container {
+  margin-top: 0.75rem;
+
+  .search-form-content {
+    .search-form {
+      width: 100%;
+
+      .search-form-elem {
+        border-radius: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        background: $color-white;
+
+        input {
+          width: 100%;
+          background: transparent;
+          outline: none;
+          border: transparent;
+          padding-left: 1rem;
+
+          &:focus {
+            outline: none;
+            border-color: rgb(180, 84, 5);
+          }
+
+          &::placeholder {
+            font-size: 1.25rem;
+            padding: 0.5rem;
+            opacity: 0.8;
+          }
+        }
+
+        .form-submit-btn {
+          display: flex;
+          align-items: center;
+          border: none;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: $transition;
+
+          &:hover {
+            background: rgb(196, 193, 193);
+          }
+
+          .search-icon {
+            color: rgb(129, 128, 128);
+          }
+        }
+      }
+    }
+  }
+}
