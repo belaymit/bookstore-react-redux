@@ -1,11 +1,14 @@
 nav {
-  display: grid;
-  place-items: center;
   position: fixed;
+  padding: 0.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 99;
-  background: #05263b;
+  background: #fff;
   box-shadow: 3px 10px 5px 0 rgba(77, 70, 70, 0.75);
   -webkit-box-shadow: 3px 1px 5px 0 rgba(180, 175, 175, 0.75);
   -moz-box-shadow: 3px 10px 5px 0 rgba(77, 70, 70, 0.75);
@@ -17,15 +20,6 @@ nav {
   display: none;
 }
 
-.nav-container {
-  padding: 0.5rem 4rem;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
 .logo {
   display: flex;
   gap: 0.625rem;
@@ -34,9 +28,8 @@ nav {
 }
 
 .logo span {
-  color: rgb(161, 165, 163);
+  color: #0099fc;
   font-size: 2rem;
-  font-family: "Satisfy", cursive;
 }
 
 .user-avatar img {
@@ -53,6 +46,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  text-transform: uppercase;
 }
 
 .nav-links a {
@@ -196,7 +190,6 @@ nav {
   }
 
   .logo {
-    width: 3rem;
     margin-left: 1rem;
   }
 
