@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import AddBooks from '../../components/addBooks/AddBooks';
 import Book from '../../components/books/Book';
 import { addBooks, getAllBooks } from '../../redux/books/booksSlice';
-// import data from '../../data';
 import '../../styles/home.scss';
 
 const getDatafromLS = () => {
