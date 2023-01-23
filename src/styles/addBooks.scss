@@ -63,5 +63,9 @@
         border: 1px solid $color-blue;
       }
     }
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 }
