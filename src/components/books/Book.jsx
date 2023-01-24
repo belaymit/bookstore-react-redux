@@ -1,22 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/books';
 import progress from '../../assets/progress.png';
 import '../../styles/books.css';
 
 const Book = (props) => {
-  const { data } = props;
+  const dispatch = useDispatch();
+  const {
+    id, title, author, category,
+  } = props;
+  const handleRemoveBook = () => {
+    dispatch(removeBook(id));
+  };
+
   return (
-    <li key={data.id} className="book">
+    <li key={id} className="book">
       <div className="book-content">
         <div className="book-info">
-          <h4>{data.category}</h4>
-          <h2>{data.title}</h2>
-          <h6>{data.author}</h6>
+          <h4>{category}</h4>
+          <h2>{ title }</h2>
+          <h6>{ author }</h6>
           <div className="action-buttons">
             <button type="button" className="comment">Comments</button>
             <div className="vertical-divider" />
             <button
               type="button"
+              onClick={handleRemoveBook}
             >
               Remove
             </button>
@@ -45,9 +55,10 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  data: PropTypes.oneOfType([
-    PropTypes.object,
-  ]).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
