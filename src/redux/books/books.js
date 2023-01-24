@@ -1,13 +1,21 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_ALL_BOOKS = 'GET_ALL_BOOKS';
+const initialState = [
+  {
+    id: 1, title: 'Born Crime', author: 'Trover Noha', category: 'Fiction',
+  },
+  {
+    id: 2, title: 'After Many a Summer Dies the Swan', author: 'Aldous Huxley', category: 'Geography',
+  },
+];
 
-const booksReducer = (state = [], action) => {
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.book];
+      return [...state, action.payload];
     case REMOVE_BOOK:
-      return state;
+      return state.filter((book) => book.id !== action.payload);
     case GET_ALL_BOOKS:
       return action.books;
     default:
@@ -25,11 +33,4 @@ export const removeBook = (book) => ({
   payload: book,
 });
 
-export const getBooks = () => {
-  const books = localStorage.getItem('books');
-  return {
-    type: GET_ALL_BOOKS,
-    books,
-  };
-};
 export default booksReducer;
