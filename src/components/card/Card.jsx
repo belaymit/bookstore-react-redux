@@ -10,7 +10,6 @@ const Card = ({ data }) => {
   return (
     <>
       {
-      // eslint-disable-next-line array-callback-return, consistent-return
       data.map((elem) => {
         const thumbnail = elem.volumeInfo.imageLinks && elem.volumeInfo.imageLinks.smallThumbnail;
         const { publisher } = elem.volumeInfo;
@@ -48,6 +47,23 @@ const Card = ({ data }) => {
             </>
           );
         }
+        return (
+          <div className="card-item" key={elem.id}>
+            <div className="card-inner">
+              <div className="card-top">
+                <img src="https://josipmisko.com/img/books/The-Road-to-React.jpg" alt="react" />
+              </div>
+              <div className="card-bottom">
+                <div className="card-info">
+                  <h4>Intro to React</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <span>Mega Publishing</span>
+                  <p>Pages: 360</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
       })
      }
     </>
