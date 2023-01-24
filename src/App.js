@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Categories from './components/categories/Categories';
 import Home from './pages/home/Home';
@@ -19,7 +18,6 @@ const App = () => (
         <Route path="/store" element={<Store />} />
         <Route path="/store/:id" element={<BookDetails />} />
       </Routes>
-      <Footer />
     </div>
   </>
 );
