@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBooks } from '../../redux/books/books';
 import '../../styles/addBooks.scss';
 
+// store input data in local storage
 const getDataFromLocalStorage = () => {
   const data = localStorage.getItem('books');
   if (data) {
@@ -16,7 +17,10 @@ const AddBooks = () => {
   const [category, setCategory] = useState('');
   const [author, setAuthor] = useState('');
   const [books, setBooks] = useState(getDataFromLocalStorage());
+
   const dispatch = useDispatch();
+
+  // create object to store input data
   const handleSubmit = (e) => {
     e.preventDefault();
     const booksCollection = {
@@ -61,10 +65,10 @@ const AddBooks = () => {
           <option value="Education">Education</option>
           <option value="Politics">Politics</option>
           <option value="Geography">Geography</option>
-          <option value="Fiction">Geography</option>
-          <option value="Adventure stories">Geography</option>
-          <option value="Fairy tales">Geography</option>
-          <option value="Humour and satire">Geography</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Adventure stories">Adventure</option>
+          <option value="Fairy tales">Fairy tales</option>
+          <option value="Humour and satire">Humour and satire</option>
         </select>
         <button type="submit" className="btn-submit">Add Book</button>
       </form>
