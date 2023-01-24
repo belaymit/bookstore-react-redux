@@ -21,8 +21,8 @@ const AddBooks = () => {
     };
     dispatch(addBooks(booksCollection));
     setTitle('');
-    setCategory('');
     setAuthor('');
+    setCategory('Select');
   };
 
   return (
@@ -46,6 +46,7 @@ const AddBooks = () => {
           required
         />
         <select className="category-input" onChange={(e) => setCategory(e.target.value)}>
+          <option value="Select">Select</option>
           <option value="Programming">Programming</option>
           <option value="Education">Education</option>
           <option value="Politics">Politics</option>
