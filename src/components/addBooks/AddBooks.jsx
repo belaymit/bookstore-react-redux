@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBooks } from '../../redux/books/books';
 import '../../styles/addBooks.scss';
 
-// store input data in local storage
-const getDataFromLocalStorage = () => {
-  const data = localStorage.getItem('books');
-  if (data) {
-    return JSON.parse(data);
-  }
-  return [];
-};
 const AddBooks = () => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [author, setAuthor] = useState('');
-  const [books, setBooks] = useState(getDataFromLocalStorage());
 
   const dispatch = useDispatch();
 
-  // create object to store input data
   const handleSubmit = (e) => {
     e.preventDefault();
     const booksCollection = {
@@ -29,16 +19,11 @@ const AddBooks = () => {
       category,
       author,
     };
-    setBooks([...books, booksCollection]);
-    dispatch(addBooks(books));
+    dispatch(addBooks(booksCollection));
     setTitle('');
     setCategory('');
     setAuthor('');
   };
-
-  useEffect(() => {
-    localStorage.setItem('books', JSON.stringify(books));
-  }, [books]);
 
   return (
     <div className="add-book-container">
