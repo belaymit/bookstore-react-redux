@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Categories from './components/categories/Categories';
@@ -10,7 +10,7 @@ import Contacts from './pages/contacts/Contacts';
 
 const App = () => (
   <>
-    <BrowserRouter>
+    <div className="app-container">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ const App = () => (
         <Route path="/store/:id" element={<BookDetails />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </div>
   </>
 );
 
