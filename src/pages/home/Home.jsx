@@ -1,11 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import AddBooks from '../../components/addBooks/AddBooks';
 import Book from '../../components/books/Book';
+import { fetchBooks } from '../../redux/books/books';
 import '../../styles/home.scss';
 
 const Home = () => {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   let renderBooks = '';
   renderBooks = books.length > 0 ? (
