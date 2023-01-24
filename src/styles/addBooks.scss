@@ -50,40 +50,6 @@
     }
 
     .btn-submit {
-      flex: 0.5;
-      background: #3498db;
-      outline: none;
-      border: 0.3px solid #3498db;
-      cursor: pointer;
-      color: $color-white;
-      transition: $transition;
-
-      &:hover {
-        border: 0.3px solid orange;
-        background: #1f567a;
-      }
-    }
-
-    select {
-      padding: 0.75rem;
-      border-radius: 0.25rem;
-      border: 1px solid #e8e8e8;
-      background-color: #fff;
-      font-size: 1rem;
-      letter-spacing: 0.15px;
-      color: #121212;
-
-      &:focus {
-        outline: none;
-        border: 1px solid $color-blue;
-      }
-    }
-
-    @include sm {
-      flex-direction: column;
-    }
-
-    button {
       cursor: pointer;
       border: none;
       background-color: #0290ff;
@@ -94,6 +60,23 @@
       font-weight: 300;
       letter-spacing: 0.5px;
       color: #fff;
+      transition: $transition;
+
+      &:hover {
+        border: 0.3px solid transparent;
+        background: #4781a8;
+      }
+    }
+
+    select {
+      &:focus {
+        outline: none;
+        border: 1px solid $color-blue;
+      }
+    }
+
+    @include sm {
+      flex-direction: column;
     }
   }
 }
