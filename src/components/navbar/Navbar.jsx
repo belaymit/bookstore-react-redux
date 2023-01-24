@@ -10,16 +10,18 @@ const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   return (
     <nav className="nav-container">
-      <Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
-        <span>Book Store CMS</span>
-      </Link>
-      <ul className={`nav-links ${isNavShowing ? 'show-nav' : 'hide-nav'}`}>
-        {data.map((item) => (
-          <li key={item.id}>
-            <NavLink to={item.link} className={({ isActive }) => (isActive ? 'active-nav' : '')} onClick={() => setIsNavShowing((prev) => !prev)}>{ item.title }</NavLink>
-          </li>
-        ))}
-      </ul>
+      <div className="nav-left">
+        <Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
+          <span>Book Store CMS</span>
+        </Link>
+        <ul className={`nav-links ${isNavShowing ? 'show-nav' : 'hide-nav'}`}>
+          {data.map((item) => (
+            <li key={item.id}>
+              <NavLink to={item.link} className={({ isActive }) => (isActive ? 'active-nav' : '')} onClick={() => setIsNavShowing((prev) => !prev)}>{ item.title }</NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="user-avatar">
         <img src={user} alt="user-avatar" />
       </div>
