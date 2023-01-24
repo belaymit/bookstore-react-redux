@@ -1,30 +1,24 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import AddBooks from '../../components/addBooks/AddBooks';
 import Book from '../../components/books/Book';
-import { addBooks } from '../../redux/books/books';
 import '../../styles/home.scss';
 
-const getDataFromLocalStorage = () => {
-  const data = localStorage.getItem('books');
-  if (data) {
-    return JSON.parse(data);
-  }
-  return [];
-};
-
 const Home = () => {
-  // const allBooks = useSelector((state) => state.books);
-  const dispatch = useDispatch();
-  const [storedBooks, setStoredBooks] = useState(getDataFromLocalStorage());
-  console.log(setStoredBooks);
+  const books = useSelector((state) => state.books);
 
-  dispatch(addBooks(storedBooks));
   let renderBooks = '';
-  renderBooks = storedBooks.length > 0 ? (
-    storedBooks.map((elem) => (
+  renderBooks = books.length > 0 ? (
+    books.map((elem) => (
       <>
-        <Book data={elem} />
+        <Book
+          id={elem.id}
+          key={elem.id}
+          book={elem}
+          title={elem.title}
+          author={elem.author}
+          category={elem.category}
+        />
       </>
     ))
   ) : (
