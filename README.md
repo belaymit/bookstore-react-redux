@@ -205,7 +205,7 @@ If you like this project please give it a star
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-- I would like to thank Microverse community
+- I would like to thank Microverse community and also I would like to give credits to the original design creator of the [project](https://zeplin.io/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

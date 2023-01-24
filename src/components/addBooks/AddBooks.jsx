@@ -46,15 +46,14 @@ const AddBooks = () => {
           required
         />
         <select className="category-input" onChange={(e) => setCategory(e.target.value)}>
-          <option value="Select">Select</option>
-          <option value="Programming">Programming</option>
-          <option value="Education">Education</option>
-          <option value="Politics">Politics</option>
-          <option value="Geography">Geography</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Adventure stories">Adventure</option>
-          <option value="Fairy tales">Fairy tales</option>
-          <option value="Humour and satire">Humour and satire</option>
+          <option value="Book">Book</option>
+          <option value="Action">Action</option>
+          <option value="Biography">Biography</option>
+          <option value="History">History</option>
+          <option value="Horror">Horror</option>
+          <option value="Economy">Economy</option>
+          <option value="Learning">Learning</option>
+          <option value="Science-Fiction">Sci-Fi</option>
         </select>
         <button type="submit" className="btn-submit">Add Book</button>
       </form>
