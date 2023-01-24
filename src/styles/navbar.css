@@ -10,7 +10,13 @@ nav {
   height: 60px;
   background-color: #fff;
   padding: 4rem 7rem;
-  gap: 1.8rem;
+  gap: 1.2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 }
 
 .nav-toggle-btn {
@@ -45,7 +51,7 @@ nav {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.3rem;
+  gap: 2rem;
   text-transform: uppercase;
 }
 
@@ -53,8 +59,8 @@ nav {
   display: flex;
   flex-grow: 1;
   list-style-type: none;
-  grid-gap: 40px;
-  gap: 40px;
+  grid-gap: 2rem;
+  gap: 2rem;
 }
 
 .nav-links ul li {
@@ -64,7 +70,7 @@ nav {
 }
 
 .nav-links a {
-  opacity: 0.5;
+  opacity: 0.3;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
