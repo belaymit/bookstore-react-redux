@@ -1,0 +1,95 @@
+@import '../commons/common-css-rules.scss';
+
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    border-bottom: 1px solid rgb(223, 214, 214);
+  }
+
+  .container {
+    &.contact-container {
+      width: 58%;
+      display: grid;
+      grid-template-columns: 30% 58%;
+      gap: 12%;
+
+      @include md {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @include sm {
+        width: 100%;
+        margin: 0 2rem;
+      }
+    }
+
+    .contact-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .contact-option {
+        background: rgba(228, 228, 228, 0.507);
+        padding: 0.8rem;
+        border-radius: 1.2rem;
+        text-align: center;
+        border: 1px solid transparent;
+        transition: $transition;
+
+        &:hover {
+          background: transparent;
+          border-color: red;
+        }
+
+        a {
+          margin-top: 0.5rem;
+          display: inline-block;
+          font-size: 0.9rem;
+          color: rgb(77, 73, 73);
+        }
+
+        h4 {
+          font-weight: 400;
+          color: lightslategray;
+        }
+
+        .contact-option-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.2rem;
+          color: rgb(8, 93, 143);
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background: transparent;
+        border: 2px solid rgb(236, 233, 236);
+        resize: none;
+        color: black;
+      }
+
+      @include sm {
+        margin: 0 2rem;
+      }
+    }
+  }
+}

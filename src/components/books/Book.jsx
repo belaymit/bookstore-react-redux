@@ -1,52 +1,64 @@
 import React from 'react';
-import { BsTrash } from 'react-icons/bs';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import { MdEdit } from 'react-icons/md';
-import { CiEdit } from 'react-icons/ci';
-import '../../styles/books.scss';
-import 'react-circular-progressbar/dist/styles.css';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/books';
+import progress from '../../assets/progress.png';
+import '../../styles/books.css';
 
-const Book = () => (
-  <div className="book-container">
-    <div className="book-info">
-      <div className="book-description">
-        <h5>Category</h5>
-        <h2>Title</h2>
-        <h4>Author</h4>
+const Book = (props) => {
+  const dispatch = useDispatch();
+  const {
+    id, title, author, category,
+  } = props;
+  const handleRemoveBook = () => {
+    dispatch(removeBook(id));
+  };
+
+  return (
+    <li key={id} className="book">
+      <div className="book-content">
+        <div className="book-info">
+          <h4>{category}</h4>
+          <h2>{ title }</h2>
+          <h6>{ author }</h6>
+          <div className="action-buttons">
+            <button type="button" className="comment">Comments</button>
+            <div className="vertical-divider" />
+            <button
+              type="button"
+              onClick={handleRemoveBook}
+            >
+              Remove
+            </button>
+            <div className="vertical-divider" />
+            <button type="button" className="edit">Edit</button>
+          </div>
+        </div>
+        <div className="book-progress">
+          <div className="progress-bar">
+            <img src={progress} alt="progress" />
+          </div>
+          <div className="progress-info">
+            <p className="percent-complete">64%</p>
+            <p className="completed">Completed</p>
+          </div>
+          <div className="progress-divider" />
+          <div className="chapter-container">
+            <p>Current Chapter</p>
+            <h4>Chapter 17</h4>
+            <button type="submit">UPDATE PROGRESS</button>
+          </div>
+        </div>
       </div>
-      <div className="action-btn">
-        <button type="button">
-          <CiEdit />
-          Comments
-        </button>
-        <div className="separator" />
-        <button type="button">
-          <BsTrash />
-          Remove
-        </button>
-        <div className="separator" />
-        <button type="button">
-          <MdEdit />
-          Edit
-        </button>
-      </div>
-    </div>
-    <div className="progress">
-      <div className="progress-bar">
-        <CircularProgressbar value={70} strokeWidth={5} />
-      </div>
-      <div className="progress-description">
-        <p className="percent-complete">70%</p>
-        <p className="completed">Completed</p>
-      </div>
-      <div className="progress-divider" />
-      <div className="chapter-container">
-        <p>Current Chapter</p>
-        <h4>Chapter 17</h4>
-        <button type="submit">UPDATE PROGRESS</button>
-      </div>
-    </div>
-  </div>
-);
+    </li>
+  );
+};
+
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
 
 export default Book;

@@ -3,6 +3,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import { Link, NavLink } from 'react-router-dom';
 import { GoThreeBars } from 'react-icons/go';
 import data from '../../commons/data';
+import user from '../../assets/user.png';
 import '../../styles/navbar.css';
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="user-avatar">
-        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="user-avatar" />
+        <img src={user} alt="user-avatar" />
       </div>
       <button type="button" className="nav-toggle-btn" onClick={() => setIsNavShowing((prev) => !prev)}>
         {isNavShowing ? <MdOutlineClose /> : <GoThreeBars />}
