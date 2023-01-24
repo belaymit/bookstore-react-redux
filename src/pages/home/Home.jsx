@@ -24,9 +24,7 @@ const Home = () => {
   renderBooks = storedBooks.length > 0 ? (
     storedBooks.map((elem) => (
       <>
-        <section className="books-section" key={elem.id}>
-          <Book data={elem} />
-        </section>
+        <Book data={elem} />
       </>
     ))
   ) : (
@@ -36,13 +34,13 @@ const Home = () => {
   );
 
   return (
-    <main className="home-container">
-      {renderBooks}
+    <div className="books-container">
+      <ul>
+        {renderBooks}
+      </ul>
       <div className="horizontal-divide" />
-      <section className="add-book-section">
-        <AddBooks />
-      </section>
-    </main>
+      <AddBooks />
+    </div>
   );
 };
 
