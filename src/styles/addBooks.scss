@@ -11,10 +11,10 @@
   }
 
   .add-book-form {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display: flex;
-    grid-gap: 32px;
-    gap: 32px;
+    grid-gap: 2rem;
+    gap: 2rem;
 
     input,
     select {
@@ -51,6 +51,7 @@
 
     .btn-submit {
       cursor: pointer;
+      width: 25%;
       border: none;
       background-color: #0290ff;
       border-radius: 3px;
