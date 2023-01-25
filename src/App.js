@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Categories from './components/categories/Categories';
+import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Store from './pages/store/Store';
 import BookDetails from './components/bookDetails/BookDetails';
@@ -18,6 +19,7 @@ const App = () => (
         <Route path="/store" element={<Store />} />
         <Route path="/store/:id" element={<BookDetails />} />
       </Routes>
+      <Footer />
     </div>
   </>
 );
